@@ -11,8 +11,7 @@ class HelloTest extends TestCase
         $hello = new Hello();
         $this->assertSame('Bonjour, BTS SIO SLAM!', $hello->sayHello('BTS SIO SLAM'));
     }
-
-    public function testSayHelloEmpty(): void
+ public function testSayHelloEmpty(): void
     {
         $hello = new Hello();
         $this->assertSame('Bonjour, !', $hello->sayHello(''));
@@ -27,7 +26,7 @@ class HelloTest extends TestCase
     public function testNumericName(): void
     {
         $hello = new Hello();
-        $this->assertSame('Bonjour, 123!', $hello->sayHello('123'));
+        $this->assertSame('Bonjour, 123!', $hello->sayHello('abc'));
     }
 
     public function testReturnType(): void
@@ -35,4 +34,5 @@ class HelloTest extends TestCase
         $hello = new Hello();
         $this->assertIsString($hello->sayHello('Bob'));
     }
+   
 }
